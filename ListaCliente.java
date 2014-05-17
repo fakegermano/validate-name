@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+
 public class ListaCliente {
 
 	private ArrayList<Cliente> lista;
@@ -95,7 +96,7 @@ public class ListaCliente {
 				break;
 			case 7:
 				pattern = Pattern.compile("[^$]*([aeiouAEIOU])[^$]*([aeiouAEIOU])[^$]*"
-						+ "\\$(?=.*\\1(?=.*\\2)).*");
+						+ "\\$((?=.*\\1(?=.*\\2))|(?=.*\\2(?=.*\\1))).*");
 				matcher = pattern.matcher(cliente.getNome().concat("$")
 						.concat(cliente.getSobrenome()));
 				if (matcher.lookingAt()) {
