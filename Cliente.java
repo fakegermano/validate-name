@@ -10,7 +10,7 @@ public class Cliente {
 	private String telefone;
 	
 	public String toString() {
-		return this.nome + " " + this.sobrenome;
+		return "Nome: " + this.nome + " " + this.sobrenome;
 	}
 	/**
 	 * @return the nome
